@@ -1,0 +1,292 @@
+/*-----------------------FONT */
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One:100,200,300,400,500,600,700|Josefin+Sans&display=swap:100,200,300,400,500,600,700');
+
+/*-----------------------SPECIAL MARGINS/HEADINGS/TEXT */
+
+body {
+    padding-top: 90px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #09191D;
+    background-image: url(https://github.com/JSudron/Nordic-Discover-Project/blob/master/assets/images/background-xlarge.jpg?raw=true);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.navbar-links{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 4rem;
+    }
+}
+
+.section-heading, .contact-heading {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #FAED26;
+}
+
+.iw_table_row {
+    font-size: 0.6rem;
+    font-family: 'Fjalla One', sans-serif;
+    color: #09191D;
+}
+
+@media (min-width: 768px) {
+    .iw_table_row {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    }
+}
+/*-----------------------NAVBAR */
+
+.navbar {
+    background: transparent;
+    color: #FAED26;
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    cursor:pointer;
+}
+
+.navbar:hover {
+    color: #FFFFFF;
+    transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #09191D;
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #FAED26;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #FFFFFF;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+/*-----------------------SEARCH FILTERS */
+
+@media (min-width: 992px) {
+    .lead-large {
+    margin-top: 150px;
+    }
+}
+
+#category, #autocomplete {
+    border-radius: 25px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    color: #09191D;
+    background-color: #FFFFFF;
+    border: transparent;
+    outline: none;
+    text-align-last: center;
+}
+
+#locationField {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.select-option {
+    text-align: center;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input[type="text"] {
+    text-align:center;
+}
+
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+    background-color: #FAED26;
+    color: #09191D;
+    border: transparent;
+}
+
+.btn:hover, .btn-primary:active {
+    background-color: #FFFFFF;
+    color: #09191D;
+    border: transparent;
+    transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+}
+
+.btn:focus, .btn:active {
+  outline: none;
+  box-shadow: none; 
+}
+
+/*-----------------------MAP */
+
+#map {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 75vh;
+    background: transparent;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/*-----------------------RESULTS */
+
+table {
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+#listing {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#results {
+    color: #FFFFFF;
+}
+
+#results-heading {
+    color: #FAED26;
+}
+
+/*-----------------------CONTACT */
+
+.fa-envelope {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+
+/*-----------------------TESTIMONIALS */
+
+.testimonial-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.label {
+    color: #FFFFFF;
+}
+
+.reviewer-image {
+    border: 25px solid transparent;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.testimonial-hover:hover {
+    background-color: #FAED26;
+    transition: background-color 0.8s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in-out;
+    -webkit-transition: background-color 0.8s ease-in-out;
+    -o-transition: background-color 0.8s ease-in-out;
+}
+
+/*-----------------------FOOTER */
+
+footer {
+    margin-top: 20px;
+    background: transparent;
+    color: #FAED26;
+}
+
+.footer-text {
+    color: #FFFFFF;
+}
+
+#footer-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.icon-border a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 7px;
+    text-align: center;
+    background: #FFFFFF;
+    color: #09191D;
+}
+
+.icon-border i:hover {
+    background: #FAED26;
+    color: #09191D;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+} 
