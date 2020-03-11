@@ -1,11 +1,13 @@
 body, html {
     height: 100%;
+    margin:0;
+    padding:0;
 }
 
 /*-----------------------HOME */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  height: 100vh;
+  height: 90vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,3 +22,42 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+/*-----------------------FOOTER */
+
+footer {
+    margin-top: 20px;
+    background: transparent;
+    color: #FAED26;
+    background-color: #0A100D;
+}
+
+.footer-text {
+    color: #FFFFFF;
+}
+
+#footer-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.icon-border a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 7px;
+    text-align: center;
+    background: #FFFFFF;
+    color: #09191D;
+}
+
+.icon-border i:hover {
+    background: #FAED26;
+    color: #09191D;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+} 
