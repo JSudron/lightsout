@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for story in stories %}
+            {{story.story_name}}
+            {{story.category}}
+            {{story.submitted_by}}
+            {{story.submission_date}}
+            {{story.story_text}}
+        {% endfor %}
+    </body>
+</html>
