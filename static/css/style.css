@@ -5,25 +5,38 @@
 /*-----------------------SPECIAL MARGINS/HEADINGS/TEXT */
 
 body, html {
-    background-color: #1E1E24;
+    background-color: #0A100D;
     color: #FFF8F0;
     height: 100%;
     margin:0;
-    padding:0;
 }
 
-.nav-brand, .header, .animated-button {
+* {
+    box-sizing: border-box;
+}
+
+.header, .animated-button {
     font-family: 'Creepster', sans-serif;
     font-size: 2rem;
+}
+
+.nav-brand {
+    font-family: 'Creepster', sans-serif;
+    font-size: 4rem;
+}
+ 
+.story-title {
+    font-family: 'Creepster', sans-serif;
+    font-size: 1.5rem;
 }
 
 .section-title {
     font-family: 'Creepster', sans-serif;
     font-size: 5rem;
-    padding-top: 80px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
+    padding-top: 90px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
 }
 
-p .nav-link {
+p, h5, .nav-link {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -33,14 +46,17 @@ p .nav-link {
     position: fixed;
     margin-bottom: 0;
     width: 100vw;
-    background-color: #1E1E24;
+    background-color: transparent;
     border: 0;
     z-index: 100;
-    opacity: 0.9;
 }
 
 .navbar .navbar-toggler {
     border: 0;
+}
+
+.navbar-toggler {
+    font-size: 2rem;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
@@ -64,6 +80,7 @@ p .nav-link {
 }
 
 /*-----------------------HOME */
+/* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -89,6 +106,7 @@ p .nav-link {
 
 .animated-button {
     border: none;
+    cursor: pointer;
     background-color: #92140C;
     color: #FFF8F0 !important;
     font-weight: 100;
@@ -112,31 +130,13 @@ p .nav-link {
 /*-----------------------STORIES */
 /* Code learnt from w3schools.com & tutorials with changes made by myself */
 
-.stories-row {
-  display: flex;
-}
-
-.stories-column {
-  flex: 33.33%;
-  padding: 5px;
-}
-
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.stories-column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.stories-row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .stories-container {
     padding: 20px 25px;
+}
+
+.stories-column {
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .story-image {
@@ -144,7 +144,6 @@ p .nav-link {
     margin-bottom: 30px;
     width: 100%;
     height: auto;
-    border-radius: 50%;
 }
 
 .story-hover:hover {
@@ -155,15 +154,63 @@ p .nav-link {
     -o-transition: background-color 0.8s ease-in-out;
 }
 
+/*-----------------------ADD & EDIT STORIES */
+/* Code learnt from w3schools.com & tutorials with changes made by myself */
+
+input[type=text], select, textarea {
+    min-height: 60px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #92140C;
+    font-family: 'Oswald', sans-serif;
+    outline-color: #92140C;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    overflow-y: auto;
+    word-wrap:break-word
+}
+
+.form-container {
+    border-radius: 5px;    
+    padding: 20px 35px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+#category, #autocomplete {
+    border-radius: 25px;
+    width: 100%;
+    height: 40px;
+}
+
+.form-image {
+    border: 5px solid #92140C;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /*-----------------------FOOTER */
 
 footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     min-height: 60px;
     margin: 0;
-    background-color: #1E1E24;
     color: #FFF8F0;
+    background-color: #1E1E24;
     z-index: 100;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 #footer-info {
@@ -190,8 +237,11 @@ footer {
     -o-transition: all 0.5s ease-in-out;
 } 
 
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
+/*-----------------------MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
   }
 }

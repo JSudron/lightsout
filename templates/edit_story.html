@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% set active_page = "update_story" %}
+{% block content %}
+    <div class="fluid-container form-container">
+        <div style="text-align:center">
+            <h2>Edit - {{story.story_name}}</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+            <img src="{{story.story_image}}" style="width:100%">
+            </div>
+            <div class="column">
+                <form action="{{url_for('update_stories', stories_id=story._id)}}" method="POST">
+                    <label for="story_name">Story Name</label>
+                    <input id="story_name" name="story_name" value="{{story.story_name}}" type="text" class="validate" required>
+                    <label for="submitted_by">Author</label>
+                    <input id="submitted_by" name="submitted_by" value="{{story.submitted_by}}" type="text" class="validate" required>
+                    <label for="story_image">Author</label>
+                    <label for="story_image">Story Image Link</label>
+                    <input id="story_image" name="story_image" value="{{story.story_image}}" type="text" class="validate" pattern="https?://.+" required>
+                    <select id="category" name="category" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for cat in categories %}
+                        {% if cat.category_name == story.category %}
+                        <option value="{{story.category_name}}" selected >{{story.category}}</option>
+                        {% else %}
+                        <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                        {% endif %}
+                    {% endfor %}
+                    </select>
+                    <label for="story_text">Edit Your Story Below</label>
+                    <textarea name="story_text" id="story_text" class="materialize-textarea" required>{{story.story_text}}</textarea>
+                    <input class="button_cont animated-button" type="submit" value="Submit Story">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

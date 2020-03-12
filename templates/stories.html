@@ -6,19 +6,20 @@
 
     <div class="container-fluid text-center stories-container" id="stories">
         <h1 class="section-title">STORIES</h1>
-        <div class="row stories-row">
-        {% for story in stories %}
-            <div class="column stories-column">
-                <h5 class="header">{{story.story_name}}</h5>
-                <a href="#story-info" data-toggle="collapse">
-                <img src="{{story.story_image}}" alt="story-image" class="story-hover story-image">
-                </a>
-                    <div class="collapse" id="story-info">
-                        <p class="story-info">Category: {{story.category}}</p>
-                        <p class="story-info">Author: {{story.submitted_by}}</p>
-                        <a href="#">Read More</a>
-                    </div>       
-            </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            {% for story in stories %}
+                <div class="column stories-column">
+                    <h5 class="header">{{story.story_name}}</h5>
+                    <a href="#story-info" data-toggle="collapse">
+                    <img src="{{story.story_image}}" alt="story-image" class="rounded story-hover story-image">
+                    </a>
+                        <div class="collapse" id="story-info">
+                            <p class="story-info">Category: {{story.category}}</p>
+                            <p class="story-info">Author: {{story.submitted_by}}</p>
+                            <a href="#">Read More</a>
+                        </div>       
+                </div>
         {% endfor %}
         </div> 
     </div>

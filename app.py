@@ -17,18 +17,24 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template("home.html")
+    return render_template('home.html')
 
 
 @app.route('/get_stories')
 def get_stories():
-    return render_template("stories.html", stories=mongo.db.stories.find())
+    return render_template('stories.html', stories=mongo.db.stories.find())
 
 
 @app.route('/stories/<stories_id>')
 def stories(stories_id):
     stories = mongo.db.stories.find_one({'_id': ObjectId(stories_id)})
     return render_template('selected_story.html', story=stories)
+
+
+@app.route('/add_story')
+def add_story():
+    return render_template('add_story.html',
+                           categories=mongo.db.categories.find())
 
 
 @app.route('/insert_story', methods=['POST'])
