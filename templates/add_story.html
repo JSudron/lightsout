@@ -12,11 +12,11 @@
             <div class="column">
                 <form action="{{url_for('insert_story')}}" method="POST">
                     <label for="story_name">Story Name</label>
-                    <input id="story_name" name="story_name" value="Story Name" type="text" class="validate rounded" required>
+                    <input id="story_name" name="story_name" placeholder="Story Name" type="text" class="validate rounded" required>
                     <label for="submitted_by">Author</label>
-                    <input id="submitted_by" name="submitted_by" value="Author" type="text" class="validate rounded" required>
+                    <input id="submitted_by" name="submitted_by" placeholder="Author" type="text" class="validate rounded" required>
                     <label for="story_image">Story Image Link</label>
-                    <input id="story_image" name="story_image" value="Story image link" type="text" class="validate rounded" pattern="https?://.+" required>
+                    <input id="story_image" name="story_image" placeholder="Story image link" type="text" class="validate rounded" pattern="https?://.+" required>
                     <select id="category" name="category" required>
                     <option class="category-select rounded" value="" disabled selected>Choose your category</option>
                     {% for cat in categories %}
@@ -25,7 +25,7 @@
                     </select>
                     <label>Category Select</label>
                     <label for="story_text">Your Story</label>
-                    <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea" onkeyup="adjustHeight(this)"required>Insert your story here...</textarea>
+                    <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea rounded" onkeyup="adjustHeight(this)" placeholder="Insert your story here..." required></textarea>
                     <input class="button_cont animated-button" type="submit" value="Submit Story">
                 </form>
             </div>
