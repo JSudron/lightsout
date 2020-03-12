@@ -1,14 +1,25 @@
-<html>
-    <head>
+{% extends 'base.html' %}
+{% set active_page = "stories" %}
+{% block content %}
+    <!-----------------------STORIES----------->
+    <!----Code learnt from w3schools.com & tutorials with changes made by myself---->
 
-    </head>
-    <body>
+    <div class="container-fluid text-center stories-container" id="stories">
+        <h1 class="section-title">STORIES</h1>
+        <div class="row stories-row">
         {% for story in stories %}
-            {{story.story_name}}
-            {{story.category}}
-            {{story.submitted_by}}
-            {{story.submission_date}}
-            {{story.story_text}}
+            <div class="column stories-column">
+                <h5 class="header">{{story.story_name}}</h5>
+                <a href="#story-info" data-toggle="collapse">
+                <img src="{{story.story_image}}" alt="story-image" class="story-hover story-image">
+                </a>
+                    <div class="collapse" id="story-info">
+                        <p class="story-info">Category: {{story.category}}</p>
+                        <p class="story-info">Author: {{story.submitted_by}}</p>
+                        <a href="#">Read More</a>
+                    </div>       
+            </div>
         {% endfor %}
-    </body>
-</html>
+        </div> 
+    </div>
+{% endblock %}

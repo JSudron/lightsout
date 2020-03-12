@@ -5,6 +5,8 @@
 /*-----------------------SPECIAL MARGINS/HEADINGS/TEXT */
 
 body, html {
+    background-color: #1E1E24;
+    color: #FFF8F0;
     height: 100%;
     margin:0;
     padding:0;
@@ -15,11 +17,15 @@ body, html {
     font-size: 2rem;
 }
 
+.section-title {
+    font-family: 'Creepster', sans-serif;
+    font-size: 5rem;
+    padding-top: 80px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
+}
+
 p .nav-link {
     font-family: 'Oswald', sans-serif;
 }
-
-
 
 /*-----------------------NAVBAR */
 
@@ -103,6 +109,52 @@ p .nav-link {
     transition: all 0.3s ease 0s;
 }
 
+/*-----------------------STORIES */
+/* Code learnt from w3schools.com & tutorials with changes made by myself */
+
+.stories-row {
+  display: flex;
+}
+
+.stories-column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.stories-column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.stories-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.stories-container {
+    padding: 20px 25px;
+}
+
+.story-image {
+    border: 25px solid transparent;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.story-hover:hover {
+    background-color: #92140C;
+    transition: background-color 0.8s ease-in-out;
+    -moz-transition: background-color 0.8s ease-in-out;
+    -webkit-transition: background-color 0.8s ease-in-out;
+    -o-transition: background-color 0.8s ease-in-out;
+}
+
 /*-----------------------FOOTER */
 
 footer {
@@ -137,3 +189,9 @@ footer {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 } 
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}

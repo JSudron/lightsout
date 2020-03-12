@@ -25,6 +25,47 @@ def get_stories():
     return render_template("stories.html", stories=mongo.db.stories.find())
 
 
+@app.route('/stories/<stories_id>')
+def stories(stories_id):
+    stories = mongo.db.stories.find_one({'_id': ObjectId(stories_id)})
+    return render_template('selected_story.html', story=stories)
+
+
+@app.route('/insert_story', methods=['POST'])
+def insert_story():
+    stories = mongo.db.stories
+    stories.insert_one(request.form.to_dict())
+    return redirect(url_for('get_stories'))
+
+
+@app.route('/edit_stories/<stories_id>')
+def edit_stories(stories_id):
+    the_story = mongo.db.stories.find_one({"_id": ObjectId(stories_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('edit_story.html', story=the_story,
+                           categories=all_categories)
+
+
+@app.route('/update_stories/<stories_id>', methods=["POST"])
+def update_stories(stories_id):
+    stories = mongo.db.stories
+    stories.update({'_id': ObjectId(stories_id)},
+                   {
+        'story_name': request.form.get('story_name'),
+        'category': request.form.get('category'),
+        'submitted_by': request.form.get('submitted_by'),
+        'story_text': request.form.get('story_text'),
+        'story_image': request.form.get('story_image')
+    })
+    return redirect(url_for('get_stories'))
+
+
+@app.route('/delete_story/<stories_id>')
+def delete_story(stories_id):
+    mongo.db.stories.remove({'_id': ObjectId(stories_id)})
+    return redirect(url_for('get_stories'))
+    
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
