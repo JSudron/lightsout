@@ -10,12 +10,12 @@ body, html {
     padding:0;
 }
 
-.nav-brand, .header {
+.nav-brand, .header, .animated-button {
     font-family: 'Creepster', sans-serif;
     font-size: 2rem;
 }
 
-.nav-link, p {
+p .nav-link {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -30,7 +30,7 @@ body, html {
     background-color: #1E1E24;
     border: 0;
     z-index: 100;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .navbar .navbar-toggler {
@@ -58,6 +58,7 @@ body, html {
 }
 
 /*-----------------------HOME */
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   height: 90vh;
@@ -78,6 +79,28 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.animated-button {
+    border: none;
+    background-color: #92140C;
+    color: #FFF8F0 !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.animated-button:hover {
+    color: #92140C !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
 }
 
 /*-----------------------FOOTER */
