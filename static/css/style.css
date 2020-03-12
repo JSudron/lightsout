@@ -1,7 +1,60 @@
+/*-----------------------FONT */
+
+@import url('https://fonts.googleapis.com/css?family=Creepster:100,200,300,400,500,600,700|Oswald&display=swap:100,200,300,400,500,600,700');
+
+/*-----------------------SPECIAL MARGINS/HEADINGS/TEXT */
+
 body, html {
     height: 100%;
     margin:0;
     padding:0;
+}
+
+.nav-brand, .header {
+    font-family: 'Creepster', sans-serif;
+    font-size: 2rem;
+}
+
+.nav-link, p {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*-----------------------NAVBAR */
+
+.navbar {
+    position: fixed;
+    margin-bottom: 0;
+    width: 100vw;
+    background-color: #1E1E24;
+    border: 0;
+    z-index: 100;
+    opacity: 0.8;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+.navbar-links {
+    color: #FFF8F0;
+    text-decoration: none;
+    text-align: left;
+}
+
+.navbar-links:hover {
+    color: #92140C;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
 }
 
 /*-----------------------HOME */
@@ -12,6 +65,10 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.hero-header {
+    font-size: 5rem;
 }
 
 .hero-text {
@@ -26,14 +83,12 @@ body, html {
 /*-----------------------FOOTER */
 
 footer {
-    margin-top: 20px;
-    background: transparent;
-    color: #FAED26;
-    background-color: #0A100D;
-}
-
-.footer-text {
-    color: #FFFFFF;
+    min-height: 60px;
+    margin: 0;
+    background-color: #1E1E24;
+    color: #FFF8F0;
+    z-index: 100;
+    opacity: 1;
 }
 
 #footer-info {
@@ -45,17 +100,15 @@ footer {
     width: 32px;
     height: 32px;
     padding: 12px 0;
-    border-radius: 50%;
+    border-radius: 30%;
     font-size: 15px;
     line-height: 7px;
     text-align: center;
-    background: #FFFFFF;
-    color: #09191D;
+    color: #92140C;
 }
 
 .icon-border i:hover {
-    background: #FAED26;
-    color: #09191D;
+    background: #FFF8F0;
     transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
