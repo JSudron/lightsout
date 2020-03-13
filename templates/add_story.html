@@ -6,10 +6,10 @@
             <h1 class="section-title">Submit Story</h1>
         </div>
         <div class="row">
-            <div class="column">
-                <img class="rounded form-image" src="https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+            <div class="column col-12 col-xl-6">
+                <img class="story-image" src="https://images.pexels.com/photos/194917/pexels-photo-194917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
             </div>
-            <div class="column">
+            <div class="column col-12 col-xl-6">
                 <form action="{{url_for('insert_story')}}" method="POST">
                     <label for="story_name">Story Name</label>
                     <input id="story_name" name="story_name" placeholder="Story Name" type="text" class="validate rounded" style="text-transform: capitalize;" required>

@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% set active_page = "selected_story" %}
 {% block content %}
-    <div class="fluid-container form-container text-center">
-        <div style="text-align:center">
+    <div class="fluid-container text-center">
+        <div>
             <h2 class="section-title">{{story.story_name}}</h2>
                 <p>Category: {{story.category}}</p>
                 <p>By: {{story.submitted_by}}</p>
         </div>
         <div class="row">
-            <div class="column">
-            <img class="story-image" src="{{story.story_image}}" style="width:100%">
+            <div class="column col-12 col-xl-6">
+            <img class="story-image" src="{{story.story_image}}">
             </div>
-            <div class="column">
+            <div class="column col-12 col-xl-6">
                 <p>{{story.story_text}}</p>
             </div>
         </div>

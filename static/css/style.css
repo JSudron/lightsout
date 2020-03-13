@@ -11,6 +11,10 @@ body, html {
     margin:0;
 }
 
+.fluid-container {
+    padding: 20px 20px 20px 20px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -33,7 +37,7 @@ body, html {
 .section-title {
     font-family: 'Creepster', sans-serif;
     font-size: 5rem;
-    padding-top: 90px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
+    padding-top: 100px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
     padding-bottom: 20px;
 }
 
@@ -118,7 +122,8 @@ p, h5, label, .nav-link, .modal-body {
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
-    margin-right:20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .animated-button:hover {
@@ -180,7 +185,10 @@ p, h5, label, .nav-link, .modal-body {
 /* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 .story-image {
-    position: flex;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
 }
 
 .buttons {
