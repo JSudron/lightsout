@@ -15,7 +15,7 @@
                     <h5 class="card-title">{{story.story_name}}</h5>
                     <p class="card-text">Category: {{story.category}}</p>
                     <p class="card-text">Author: {{story.submitted_by}}</small></p>
-                    <button class="btn btn-info card-link" data-toggle="modal" data-target="#myModal">Read Story</button>
+                    <a class="btn btn-info card-link" href="{{url_for('stories', stories_id=story._id)}}">Read Story</a>
                 </div>
             </div>
         </div>

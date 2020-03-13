@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
 {% set active_page = "selected_story" %}
 {% block content %}
-    <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title float-left">{{story.story_name}}</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="fluid-container form-container text-center">
+        <div style="text-align:center">
+            <h2 class="section-title">{{story.story_name}}</h2>
+                <p>Category: {{story.category}}</p>
+                <p>By: {{story.submitted_by}}</p>
+        </div>
+        <div class="row">
+            <div class="column">
+            <img class="story-image" src="{{story.story_image}}" style="width:100%">
             </div>
-            <div class="modal-body">
+            <div class="column">
                 <p>{{story.story_text}}</p>
             </div>
-            <div class="modal-footer">
-                <a href="{{url_for('edit_stories', stories_id=story._id)}}" type="button" class="btn btn-info modal-link" data-dismiss="modal">Edit/Delete</a>
-            </div>
-            </div>
         </div>
-        </div>
+    </div>
+    <div class="row buttons">
+        <a class="animated-button jumbo-button" href="{{ url_for('get_stories')}}" rel="nofollow noopener">Back</a>
+        <a class="animated-button jumbo-button" href="{{url_for('edit_stories', stories_id=story._id)}}" rel="nofollow noopener">Edit/Delete</a>
+    </div>
 {% endblock %}
+

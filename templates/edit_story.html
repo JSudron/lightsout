@@ -3,7 +3,7 @@
 {% block content %}
     <div class="fluid-container form-container">
         <div style="text-align:center">
-            <h2>Edit - {{story.story_name}}</h2>
+            <h2 class="section-title">Edit - {{story.story_name}}</h2>
         </div>
         <div class="row">
             <div class="column">
@@ -12,9 +12,9 @@
             <div class="column">
                 <form action="{{url_for('update_stories', stories_id=story._id)}}" method="POST">
                     <label for="story_name">Story Name</label>
-                    <input id="story_name" name="story_name" value="{{story.story_name}}" type="text" class="validate" required>
+                    <input id="story_name" name="story_name" value="{{story.story_name}}" type="text" class="validate" style="text-transform: capitalize;" required>
                     <label for="submitted_by">Author</label>
-                    <input id="submitted_by" name="submitted_by" value="{{story.submitted_by}}" type="text" class="validate" required>
+                    <input id="submitted_by" name="submitted_by" value="{{story.submitted_by}}" type="text" class="validate" style="text-transform: capitalize;" required>
                     <label for="story_image">Author</label>
                     <label for="story_image">Story Image Link</label>
                     <input id="story_image" name="story_image" value="{{story.story_image}}" type="text" class="validate" pattern="https?://.+" required>
@@ -29,8 +29,9 @@
                     {% endfor %}
                     </select>
                     <label for="story_text">Edit Your Story Below</label>
-                    <textarea name="story_text" id="story_text" class="materialize-textarea" required>{{story.story_text}}</textarea>
-                    <input class="button_cont animated-button" type="submit" value="Submit Story">
+                    <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea" style="text-transform: capitalize;" required>{{story.story_text}}</textarea>
+                    <input class="button_cont animated-button" type="submit" value="Submit Story"><span>
+                    <a class="animated-button jumbo-button" href="{{url_for('edit_stories', stories_id=story._id)}}" rel="nofollow noopener">Delete</a>
                 </form>
             </div>
         </div>

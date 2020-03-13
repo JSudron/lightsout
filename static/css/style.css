@@ -7,7 +7,7 @@
 body, html {
     background-color: #0A100D;
     color: #FFF8F0;
-    height: 100%;
+    height: 100vh;
     margin:0;
 }
 
@@ -25,7 +25,7 @@ body, html {
     font-size: 4rem;
 }
  
-.card-title, .modal-title {
+.card-title {
     font-family: 'Creepster', sans-serif;
     font-size: 1.7rem;
 }
@@ -86,7 +86,7 @@ p, h5, label, .nav-link, .modal-body {
 /* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   height: 90vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,6 +118,7 @@ p, h5, label, .nav-link, .modal-body {
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
+    margin-right:20px;
 }
 
 .animated-button:hover {
@@ -125,8 +126,6 @@ p, h5, label, .nav-link, .modal-body {
     font-weight: 700 !important;
     letter-spacing: 3px;
     background: none;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.3s ease 0s;
 }
 
@@ -157,7 +156,7 @@ p, h5, label, .nav-link, .modal-body {
 
 .card-link {
     font-family: 'Creepster', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     border-radius: 25px;
     background-color: #0A100D;
     border-color: transparent;
@@ -177,31 +176,18 @@ p, h5, label, .nav-link, .modal-body {
     -o-transition: all 0.5s ease-in-out;
 }
 
-.modal-content {
-    background-color: #FFF8F0;
-    color: #0A100D;
+/*-----------------------SELECTED STORIES */
+/* Code learnt from w3schools.com & tutorials with changes made by myself */
+
+.story-image {
+    position: flex;
 }
 
-.modal-link {
-    font-family: 'Creepster', sans-serif;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    background-color: #92140C;
-    border-color: transparent;
-    color: #FFF8F0;
-    cursor: pointer;
-}
-
-.modal-link:hover {
-    color: #0A100D !important;
-    background-color: #FFF8F0;
-    border-color: transparent;
-    font-weight: 500 !important;
-    letter-spacing: 3px;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
 /*-----------------------ADD & EDIT STORIES */
@@ -217,7 +203,8 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     overflow-y: auto;
-    word-wrap:break-word
+    word-wrap: break-word;
+    border-radius: 25px;
 }
 
 .form-container {
@@ -238,10 +225,6 @@ input[type=text], select, textarea {
     height: 50px;
 }
 
-.form-image {
-    border: 5px solid #92140C;
-}
-
 .row:after {
     content: "";
     display: table;
@@ -254,7 +237,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    min-height: 60px;
+    height: 60px;
     margin: 0;
     color: #FFF8F0;
     background-color: #0A100D;
