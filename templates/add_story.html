@@ -17,17 +17,17 @@
                     <input id="submitted_by" name="submitted_by" placeholder="Author" type="text" class="validate rounded" style="text-transform: capitalize;" required>
                     <label for="story_image">Story Image Link</label>
                     <input id="story_image" name="story_image" placeholder="Story image link" type="text" class="validate rounded" pattern="https?://.+" required>
+                    <label>Category Select</label>
                     <select id="category" name="category" required>
                     <option class="category-select rounded" value="" disabled selected>Choose your category</option>
                     {% for cat in categories %}
                         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                     {% endfor %}
                     </select>
-                    <label>Category Select</label>
                     <label for="story_text">Your Story</label>
                     <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea rounded" onkeyup="adjustHeight(this)" style="text-transform: capitalize;" 
                         placeholder="Insert your story here..." required></textarea>
-                    <input class="button_cont animated-button" type="submit" value="Submit Story">
+                    <input class="button_cont animated-button text-center" type="submit" value="Submit Story">
                 </form>
             </div>
         </div>

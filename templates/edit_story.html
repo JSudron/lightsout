@@ -18,6 +18,7 @@
                     <label for="story_image">Author</label>
                     <label for="story_image">Story Image Link</label>
                     <input id="story_image" name="story_image" value="{{story.story_image}}" type="text" class="validate" pattern="https?://.+" required>
+                    <label>Category Select</label>
                     <select id="category" name="category" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for cat in categories %}
