@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% set active_page = "selected_story" %}
+{% block content %}
+    <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title float-left">{{story.story_name}}</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>{{story.story_text}}</p>
+            </div>
+            <div class="modal-footer">
+                <a href="{{url_for('edit_stories', stories_id=story._id)}}" type="button" class="btn btn-info modal-link" data-dismiss="modal">Edit/Delete</a>
+            </div>
+            </div>
+        </div>
+        </div>
+{% endblock %}

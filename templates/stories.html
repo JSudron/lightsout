@@ -1,26 +1,25 @@
 {% extends 'base.html' %}
 {% set active_page = "stories" %}
 {% block content %}
-    <!-----------------------STORIES----------->
-    <!----Code learnt from w3schools.com & tutorials with changes made by myself---->
+<!-----------------------STORIES----------->
+<!----Code learnt from w3schools.com & tutorials with changes made by myself---->
 
-    <div class="container-fluid text-center stories-container" id="stories">
-        <h1 class="section-title">STORIES</h1>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            {% for story in stories %}
-                <div class="column stories-column">
-                    <h5 class="header">{{story.story_name}}</h5>
-                    <a href="#story-info" data-toggle="collapse">
-                    <img src="{{story.story_image}}" alt="story-image" class="rounded story-hover story-image">
-                    </a>
-                        <div class="collapse" id="story-info">
-                            <p class="story-info">Category: {{story.category}}</p>
-                            <p class="story-info">Author: {{story.submitted_by}}</p>
-                            <a href="#">Read More</a>
-                        </div>       
+<div class="fluid-container stories-container text-center">
+	<h1 class="section-title">STORIES</h1>
+	<div class="row">
+		{% for story in stories %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <div class="card card-list">
+                <img class="card-img-top" src="{{story.story_image}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{story.story_name}}</h5>
+                    <p class="card-text">Category: {{story.category}}</p>
+                    <p class="card-text">Author: {{story.submitted_by}}</small></p>
+                    <button class="btn btn-info card-link" data-toggle="modal" data-target="#myModal">Read Story</button>
                 </div>
-        {% endfor %}
-        </div> 
-    </div>
+            </div>
+        </div>
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}
