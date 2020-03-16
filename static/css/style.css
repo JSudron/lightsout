@@ -37,7 +37,7 @@ body, html {
 .section-title {
     font-family: 'Creepster', sans-serif;
     font-size: 5rem;
-    padding-top: 100px; /*---ScrollSpy navigation was previously blocking the headings with navbar---*/
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 
