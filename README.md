@@ -1,97 +1,76 @@
-# NORDIC DISCOVERY - Project Two: Interactive Frontend Development
+# LIGHTS OUT! - Project Three: Data Centric Development
 
-![Screenshot](https://github.com/JSudron/Nordic-Discover-Project/blob/master/assets/images/Multi_Device_Website_Mockupr.png?raw=true)
+![Screenshot]()
 
-A live demo can be found [here](https://jsudron.github.io/Nordic-Discovery-Project/).
+A live demo can be found [here]().
 
 ## Introduction - Project Purpose
 
-For this project I was tasked with creating an application for a travel company called Nordic Discovery. The application allows users to search for a variety of locations within
-destinations in Scandinavia & Iceland. These include options for accomodation, restaurants, tourist attractions etc. This gives users a one-stop shop in finding the array of options available
-to them in the location selected. Tourism in Scandinavia & Iceland has been steadily increasing over the past few years & this site should help to increase that even further by helping users plan 
-their dream holiday up north. 
+For this project I was tasked with creating a CRUD application. This application is a database of non-fictional spooky stories with the long-term goal of creating a lot of traffic to the site which would eventually allow
+for advertising to boost revenue, an example is the fictional spooky stories on creepypasta.com. This application will allow users to CREATE stories to add to the site, they can also READ through the exisiting stories 
+available, UPDATE any of the stories & also DELETE stories if they wish to. All changes are made on the client side which then feeds through to the database on the backend.
 
 ## UX
  
 ### Goals
 
-To allow users to find a variety of accomodation/attractions within any location in Denmark, Finland, Iceland, Norway & Sweden.
+To allow users to share their spooky experiences & read about other people's experiences.
 
 #### Target Audience
 
 - Users whom speak English as currently this is the only language catered for.
-- Holidaymakers of all ages looking for potential holiday destinations.
-- Holidaymakers whom have already have a holiday booked to Scandinavia or Iceland.
-- Students between 18 & 28 looking for somewhere to go on a gap year.
+- Users looking to share their spooky experiences with others.
+- Users looking to read spooky non-fictional stories.
 
-#### Customer Goals
+#### Goals
 
 - Have a fully proficient & intuitive website.
-- Reach a variety of new customers.
-- Gain advertising/sponsorship from accomodation/attractions found on the site.
+- Have full CRUD functionality.
 
 ### User Stories
 
-#### Travel Company
-
-- Have an attractive & fast website which will keep users engaged.
-- Provide a pleasant user experience so users continue to visit the site.
-- Enable users to easily find a variety of accomodation/attractions within their desired location.
-- Help to increase turnover at attractions so they'll actively advertise Nordic Discovery, e.g. via their own website.
-- In the future to drive revenue via sponsorship & advertising from searched locations & accomodation/attractions.
-- Allow users & accomodation/attractions to contact the site should they have any enquiries.
-- Showcase user testimonials to enhance the legitimacy of the website.
-
 #### UX Designer
 
-- Track user behaviour to continue to enhance the user experience.
-- Provide a website which is attractive, yet can easily be modified as per the travel companies request.
-- Ensure the functionality of the website provides the results required by the user.
-- Provide a means for the user to contact the travel company.
+- Provide a website which is attractive, yet can easily be modified if adding further functionality.
+- Ensure the CRUD functionality of the website provides the results required by the user.
 
-#### Users & Customers(accomodation/attractions)
+#### Users
 
-- Find a variety of accomodation/attractions within a desired location on one website.
-- Be able to easily contact the travel company for any issues or enquiries.
-- Be provided with the contact details for any accomodation/attractions searched for.
-- Find accomodation/attractions that may not have found without directly knowing the name of the place looking for.
-- Customers will be looking to increase the number of visitors.
-- The towns & cities will look to increase tourist numbers which will drive revenue in the area.
-- Users may find accomodation/attractions which would ordinarily only be found further down Google searches.
+- Have a platform to share their own spooky experinces with other users.
+- Be able to edit any stories should changes need to be made.
+- Allow for deletetion of stories if users feel the story should be deleted.
+- Provide users with a way to read and enjoy other people's spooky stories.
+- Navigate the site easily.
 
 ### Design
 
 #### Colours
 
-- #FAED26 Yellow
-- #FFFFFF White
-- #09191D Dark Blue
+- #1E1E24 Raisin Black
+- #92140C Sangria
+- #FFF8F0 Floral White
 
-The website [Coolors](https://coolors.co/) was used to find an attractive colour scheme which compliments Scandinavia & Iceland.
-The dark blue compliments the background image used but also contrasts against the white & yellow which helps the text to pop out against the
-background. The colours are clean & simple much like Scandinavian design whilst also mimicking the beautiful starry nights the area
-is well known for. 
+The website [Coolors](https://coolors.co/) was used to find an attractive colour scheme which compliments the horror theme.
+The raisin black compliments the hero image used but also contrasts against the sangria & floral white which helps the text to pop out against the
+background. The colours are clean & simple but also mimic the colour scheme associated with Dracula, a true icon of horror. 
 
 #### Fonts
 
-- Fjalla One
-- Josefin Sans
+- Creepster
+- Oswald
 
-Both fonts were found on the site [Google Fonts](https://fonts.google.com/). They were chosen due to the simple & clean look they have,
-which compliments the colour scheme. Josefin Sans was used for the majority of the body text whereas the Fjalla One  was used for the heading 
-to give it extra pop. It was also designed by a Swede to further enhance the nordic style design.
+Both fonts were found on the site [Google Fonts](https://fonts.google.com/). Oswald was chosen as it's a clean font which allows for easy readability.
+The Creepster font was used for headers & in the navbar. It clearly gives off a horror vibe with the oozing blood style used.
 
 ### Wireframes
 
 - All Wireframes were created using Balsamiq 3 software.
 
-- [Home Page](https://github.com/JSudron/Nordic-Discover-Project/blob/master/assets/mockups/Home%20Page.png).
+- [Home Page]().
 
-- [Menu](https://github.com/JSudron/Nordic-Discover-Project/blob/assets/mockups/Menu%20Bar.png).
+- [Stories]().
 
-- [Testimonials Page](https://github.com/JSudron/Nordic-Discover-Project/blob/assets/mockups/Testimonials%20Page.png).
-
-- [Contacts Page](https://github.com/JSudron/Nordic-Discover-Project/blob/assets/mockups/Contacts%20Page.png).
+- [Edit/Add Story]().
 
 ## Features/Functionality
 
@@ -99,53 +78,46 @@ to give it extra pop. It was also designed by a Swede to further enhance the nor
 
 #### Navigation Bar 
 
-- The Navbar-brand is used as a link to access the pop-up overlay menu which slides in from the left.
-- Due to the size of the pages the navbar is not fixed. Allows for easy navigation of the site.
+- The Navbar-brand is used as a link to the homepage whilst the hamburger menu on the right-hand side of the page opens a pop-up menu with links on the left.
+- To keep the page looking minimal & clean the hamburger menu was utilised for all screen sizes.
 
 #### Footer 
 
-- Fixed to the bottom of the page this gives a brief description on how to use the site.
-- Provides links to the relevant social media sites. 
+- Fixed to the bottom of the page has a copyright declaration.
+- Provides links to the relevant social media sites along with my Github page. 
 - For now generic social media sites are used.
-
-#### Background Image 
-
-- A background image is used as the background on each page. 
-- The navbar & footer given transparent properties to allow for a fullscreen image.
 
 ### Other Elements
 
-#### Contact Form 
+#### Add/Edit Story Form 
 
-- A modal contact form is used on the contacts page.
-- Utilises [E-mail JS](https://www.emailjs.com/) javascript to allow e-mailintegration to the desired e-mail address. 
-- Allows users to easily get in touch with the travel company.
+- A simple contact form was used on this page, with all form fields being required to submit the form.
+- When editing a story the form fields are all filled in with the relevant info for the selected story.
 
-#### Testimonials Section 
+#### Stories Section 
 
-- Has images of three users who've given glowing reviews. 
-- The images can be clicked to reveal the testimonial.
+- Has the relevant image of the story along with author & category of the story. 
+- Each story can be clicked on to reveal the story text along with links to edit or delete the current story.
 
 ### Features Left To Implement
 
-#### Country Search Filters
+#### Login/Register
 
-- Dependent on user feedback a search filter for each country can be added to the search filter.
+- Make it a requirement to have a username & password to be able to add, edit or delete a story.
+- This would allow a further feature which would allow stories to only be edited or deleted by the user who created it.
 
 #### FAQ Section
 
-- Will replace the about element shown in the footer. 
-- Give further instructions into how to use site & other information users may need.
+- Give further info about how the site works & provide contact details to get in touch with the site admin.
 
-#### Flight Search 
+#### Story Reviews
 
-- Allow users to search for flights to the selected destination.
-- Will then link to the chosen flight provider. 
+- Allow users to leave comments & upvote & downvote stories.
 
-#### Featured Accomodation/Attraction
+#### Search Bar
 
-- Showcase a different venue each week/month.
-- Provide detailed information on the venue along with user testimonials.
+- Allow users to search by category, author or keyword.
+- Further functionality would be to filter results by popularity, most commented etc.
 
 #### Further Languages
 
@@ -158,6 +130,8 @@ to give it extra pop. It was also designed by a Swede to further enhance the nor
 - HTML
 - CSS
 - JavaScript
+- Python
+- Flask
 
 ### Libraries
 
@@ -169,48 +143,58 @@ to give it extra pop. It was also designed by a Swede to further enhance the nor
 ### Tools
 
 - Github/Gitpod - Used to create & deploy website.
-- Google Maps API - Javascript functionality.
-- [E-mail JS](https://www.emailjs.com/) - Javascript functionality.
+- MongoDB - Stored the database.
+- Heroku - Used to deploy the application.
 - Balsamiq 3 Mockups
 - Google Chrome Dev Tools 
 
 ## Testing
 
-- [Click Here For Testing File](https://github.com/JSudron/Nordic-Discover-Project/blob/master/testing/testing.md)
+- [Click Here For Testing File](https://github.com/JSudron/lightsout/blob/master/testing/testing.md)
 
 ## Deployment
 
-### Hosting On GitHub
+### Cloning from GitHub
 
-- Log into GitHub.
-- Go to settings and scroll down to GitHub Pages section.
-- Select as a source master branch.
-- The page is now automatically refreshed and the project is deployed.
-- To access the project scroll down again to GitHub Pages section and click on the provided link.
-- Link also at top of this Readme file.
+- Go to [Lights Out!](https://github.com/JSudron/lightsout) repository page.
+- On the repository page click "Clone or Download".
+- In the Clone with HTTPs section, copy the clone URL for the repository.
+- In your local IDE open Git Bash.
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type git clone, and then paste the URL you copied in Step 3 - "git clone https://github.com/JSudron/lightsout".
+- Press enter and your local clone will be created.
 
-### How To Run This Project Locally
+### Heroku Deployment
 
-- Go to [Nordic Discovery](https://github.com/JSudron/Nordic-Discover-Project) repository page.
-- Click on "Clone or download" green button.
-- Copy the URL to the repository.
-- Open the terminal in your local IDE.
-- Choose the working directory where you would like to have the cloned repository.
-- Type git clone, and add the URL you copied from Github: git clone https://github.com/JSudron/Nordic-Discover-Project.git.
-- Press Enter and your local clone will be created.
+- Type `heroku ps:scale web=1` into bash terminal
+- Create requirements.txt `sudo pip3 freeze --local > requirements.txt`.
+- Create a Procfile `python app.py > Procfile`.
+- Type `heroku login -i` & enter login details.
+- Go to Deploy on Heroku and under Create New Repository copy the command: `heroku git:remote -a lightsout`, paste into bash terminal.
+- In the bash terminal type `git push heroku master`.
+- In the Heroku app dashboard, click Settings.
+- Click on reveal Config Vars.
+- Enter "IP" in first key box. Enter "0.0.0.0" into corressponding value box.
+- Enter "PORT" into 2nd key box, enter "5000" into corresponding value box.
+- Enter "MONGO_URI" in key box, enter mongodb details in value box.
+- Enter "SECRET_KEY" in key box, enter secret key from env.py.
+- Site now deployed at [Lights Out!](https://lightsout-joe.herokuapp.com/).
 
 ## Credits
 
 ### Content
 
-All original content.
+- Most stories were taken from 'It Happened To Me! Vol 3' a small book published by Fortean Times & published in 2010. 
+- The stories were often shortened.
+- UFO story came from [VICE](https://www.vice.com/en_uk/article/9k8nx5/we-asked-people-at-a-ufo-conference-about-their-alien-encounters).
+- Ghost stories also taken from [Huffington Post](https://www.huffingtonpost.co.uk/entry/work-spooky-horror-stories_l_5db0a7fbe4b01ca2a856e337?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAABTn5LEt-5AbPs9DbrSSncnXNISiqRtH8aLQTdXoFy0iJq7Teczkume6oW1YWPXOrE42HeIUokBd3z6OonjnIAhgcMUIH-JyeJnYpyVhgc9RC613Cgr-qaXv68_V6e90cXMhoE__jt6iIUYOPka_5sZBXS2jrQREf_uyIhCH4k5X)
+
 
 ### Media
 
 #### Images
 
-- Background image from [Pexels](https://www.pexels.com/photo/photo-of-starry-night-1421903/).
-- Testimonial images were taken from Facebook friend whom consented to their use. 
+- All images taken from [Pexels](https://www.pexels.com/).
 
 #### Fonts
 
@@ -221,44 +205,26 @@ All original content.
 #### Inspiration
 
 - Parts of code were learnt from various sites, which was then amended by myself to obtain the look & feel I was after.
-- The [Student Projects](https://codeinstitute.net/student-projects/) section on the Code Institute site was used to look for inspiration. 
-- Primarily the [Ben Hasselgren](https://benhasselgren.github.io/ifd-milestone-project-pages/) project was used as a base idea for the website.
-- [Awwwards]https://www.awwwards.com/) was used to look at a variety of sites for design inspiration.
+- [Awwwards](https://www.awwwards.com/) was used to look at a variety of sites for design inspiration.
 - Colour scheme from [Coolors](https://coolors.co/).
+- Slack & [Stack Overflow](https://www.stackoverflow.com/) were used to troubleshoot issues I had.
+- Tutor Support was also invaluable, not only the support but their patience.
 
-#### Navbar 
+#### Navbar
 
 - Code learnt from Code Institute tutorials.   
 - The slide menu pop-up overlay javascript was learnt from [W3schools](https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp).
 
-#### Search Filters
+#### Home Page
 
 - Code learnt from Code Institute tutorials. 
-- Code adapted up from [Stack Overflow](https://stackoverflow.com/).
-- Code adapted up from [Get Bootstrap](https://getbootstrap.com/).
+- Hero image learnt from [W3schools](https://www.w3schools.com/howto/howto_css_hero_image.asp).
 
-#### Map - Javascript
-
-- Predominantly code taken from [Google Maps](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch).
-- Map style adapted from [Snazzy Maps](https://snazzymaps.com/style/25/blue-water).
-- Code adapted up from [Stack Overflow](https://stackoverflow.com/).
-- Code adapted up from [W3schools](https://www.w3schools.com/graphics/google_maps_events.asp)
-
-#### Results
-
-- Code learnt from Code Institute tutorials.
-- Code adapted up from [Stack Overflow](https://stackoverflow.com/).
-
-#### Contact Section
-
-- Code learnt from Code Institute tutorials.
-- [E-mail JS](https://www.emailjs.com/) - Javascript functionality.
-
-#### Testimonial Section
+#### Other Pages & Footer
 
 - Code learnt from Code Institute tutorials.
 
-#### Footer
+#### Javascript, Python, Flask, CSS
 
 - Code learnt from Code Institute tutorials.
 

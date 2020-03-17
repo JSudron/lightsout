@@ -135,7 +135,6 @@ p, h5, label, .nav-link, .modal-body {
 }
 
 /*-----------------------STORIES */
-/* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 .stories-container {
     padding: 35px 25px;
@@ -182,7 +181,6 @@ p, h5, label, .nav-link, .modal-body {
 }
 
 /*-----------------------SELECTED STORIES */
-/* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 .story-image {
     object-fit: contain;
@@ -199,7 +197,6 @@ p, h5, label, .nav-link, .modal-body {
 }
 
 /*-----------------------ADD & EDIT STORIES */
-/* Code learnt from w3schools.com & tutorials with changes made by myself */
 
 input[type=text], select, textarea {
     width: 100%;
