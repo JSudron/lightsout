@@ -21,7 +21,7 @@ body, html {
 
 .header, .animated-button {
     font-family: 'Creepster', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .nav-brand {
@@ -127,8 +127,8 @@ p, h5, label, .nav-link, .modal-body {
 
 .animated-button:hover {
     color: #92140C !important;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
     background: none;
     transition: all 0.3s ease 0s;
 }
@@ -168,7 +168,7 @@ p, h5, label, .nav-link, .modal-body {
     background-color: #FFF8F0;
     border-color: transparent;
     font-weight: 500 !important;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
