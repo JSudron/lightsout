@@ -2,7 +2,7 @@
 
 ![Screenshot]()
 
-A live demo can be found [here]().
+A live demo can be found [here](https://lightsout-joe.herokuapp.com/).
 
 ## Introduction - Project Purpose
 
@@ -148,6 +148,14 @@ The Creepster font was used for headers & in the navbar. It clearly gives off a 
 - Balsamiq 3 Mockups
 - Google Chrome Dev Tools 
 
+## Database
+
+- The MongoDB database was utilised with a fairly simple many-to-many database.
+- The Database has two collections: Stories & Categories.
+- The category field in stories links to a key id field for the relevant category in categories.
+- [Stories](https://github.com/JSudron/lightsout/blob/master/images/database/database%20-%20stories.png?raw=true).
+- [Categories](https://github.com/JSudron/lightsout/blob/master/images/database/database%20-%20categories.png?raw=true).
+
 ## Testing
 
 - [Click Here For Testing File](https://github.com/JSudron/lightsout/blob/master/testing/testing.md)
@@ -157,11 +165,11 @@ The Creepster font was used for headers & in the navbar. It clearly gives off a 
 ### Cloning from GitHub
 
 - Go to [Lights Out!](https://github.com/JSudron/lightsout) repository page.
-- On the repository page click "Clone or Download".
+- On the repository page click Clone or Download.
 - In the Clone with HTTPs section, copy the clone URL for the repository.
 - In your local IDE open Git Bash.
 - Change the current working directory to the location where you want the cloned directory to be made.
-- Type git clone, and then paste the URL you copied in Step 3 - "git clone https://github.com/JSudron/lightsout".
+- Type git clone, and then paste the URL you copied in Step 3 - `git clone https://github.com/JSudron/lightsout`.
 - Press enter and your local clone will be created.
 
 ### Heroku Deployment
