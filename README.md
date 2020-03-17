@@ -66,11 +66,13 @@ The Creepster font was used for headers & in the navbar. It clearly gives off a 
 
 - All Wireframes were created using Balsamiq 3 software.
 
-- [Home Page]().
+- [Home](https://github.com/JSudron/lightsout/blob/master/images/mockups/Home.png?raw=true).
 
-- [Stories]().
+- [Stories](https://github.com/JSudron/lightsout/blob/master/images/mockups/Stories.png?raw=true).
 
-- [Edit/Add Story]().
+- [Selected Stories](https://github.com/JSudron/lightsout/blob/master/images/mockups/Selected%20Story.png?raw=true).
+
+- [Edit/Add Story](https://github.com/JSudron/lightsout/blob/master/images/mockups/Edit-Add%20Story.png?raw=true).
 
 ## Features/Functionality
 

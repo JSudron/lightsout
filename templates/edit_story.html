@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% set active_page = "update_story" %}
 {% block content %}
-    <div class="fluid-container form-container">
-        <div style="text-align:center">
+    <div class="section-container form-container text-center">
+        <div>
             <h2 class="section-title">Edit - {{story.story_name}}</h2>
         </div>
         <div class="row">
@@ -31,8 +31,10 @@
                     </select>
                     <label for="story_text">Edit Your Story Below</label>
                     <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea" style="text-transform: capitalize;" required>{{story.story_text}}</textarea>
-                    <input class="button_cont animated-button" type="submit" value="Submit Story">
-                    <a class="animated-button" href="{{url_for('delete_story', stories_id=story._id)}}" rel="nofollow noopener">Delete</a>
+                    <div class="row buttons">
+                        <input class="animated-button" type="submit" value="Submit Story">
+                        <a class="animated-button" href="{{url_for('delete_story', stories_id=story._id)}}" rel="nofollow noopener">Delete</a>
+                    </div>
                 </form>
             </div>
         </div>
