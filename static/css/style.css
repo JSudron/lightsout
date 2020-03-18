@@ -7,10 +7,14 @@
 body, html {
     background-color: #0A100D;
     color: #FFF8F0;
-    height: auto;
+    /* height: auto;
     width: 100vw;
     padding: 0;
-    margin: 0;
+    margin: 0; */
+}
+
+.row {
+    margin-right: 0;
 }
 
 .section-container {
@@ -273,6 +277,6 @@ footer {
 
 @media (max-width: 767px) {
     .hero-image {
-    height: 120vh;
+        height: 120vh;
     }
 }
