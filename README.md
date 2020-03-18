@@ -1,6 +1,6 @@
 # LIGHTS OUT! - Project Three: Data Centric Development
 
-![Screenshot]()
+![Screenshot](https://github.com/JSudron/lightsout/blob/master/images/mockups/Responsive%20Mockup.png?raw=true)
 
 A live demo can be found [here](https://lightsout-joe.herokuapp.com/).
 
