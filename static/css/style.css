@@ -7,12 +7,10 @@
 body, html {
     background-color: #0A100D;
     color: #FFF8F0;
-    height: 100vh;
-    margin:0;
 }
 
 .section-container {
-    padding: 20px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 * {
@@ -87,14 +85,14 @@ p, h5, label, .nav-link, .modal-body {
 /*-----------------------HOME */
 /* Code learnt from w3schools.com & tutorials with changes made by myself */
 
-.hero-image {
-  background-image: url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  height: 90vh;
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.hero-image {  
+    background-image: url("https://images.pexels.com/photos/289367/pexels-photo-289367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .hero-header {
@@ -236,7 +234,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: auto;
     margin: 0;
     color: #FFF8F0;
     background-color: #0A100D;
@@ -267,5 +265,16 @@ footer {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
 } 
+
+@media screen and (max-height: 400px) {
+  .parent, .hero-image {
+    position: static;
+    transform: none;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
 
 
