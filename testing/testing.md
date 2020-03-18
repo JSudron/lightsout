@@ -38,6 +38,7 @@
 
 ## Manual Tests
 
+- An initial 'test.py' file was created to make sure that python was connecting up correctly.
 - The live web address was tested on a variety of web browsers: Chrome/Safari/Opera/Explorer.
 - Each link on the site was tested to ensure it linked to the correct place.
 - The story 'The Impossible' was added using the Add Stories page.
