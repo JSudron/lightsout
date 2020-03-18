@@ -7,6 +7,10 @@
 body, html {
     background-color: #0A100D;
     color: #FFF8F0;
+    height: auto;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 .section-container {
@@ -91,7 +95,8 @@ p, h5, label, .nav-link, .modal-body {
     width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    padding: 0px 20px 0px 20px;
     position: relative;
 }
 
@@ -101,7 +106,7 @@ p, h5, label, .nav-link, .modal-body {
 
 .hero-text {
   text-align: center;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -234,8 +239,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: auto;
-    margin: 0;
     color: #FFF8F0;
     background-color: #0A100D;
     z-index: 100;
@@ -266,15 +269,10 @@ footer {
     -o-transition: all 0.5s ease-in-out;
 } 
 
-@media screen and (max-height: 400px) {
-  .parent, .hero-image {
-    position: static;
-    transform: none;
-  }
+/*-----------------------MEDIA QUERY */
 
-  .footer {
-    position: relative;
-  }
+@media (max-width: 767px) {
+    .hero-image {
+    height: 120vh;
+    }
 }
-
-
