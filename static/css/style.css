@@ -21,20 +21,21 @@ body, html {
     box-sizing: border-box;
 }
 
-.header, .animated-button {
+.header, .card-title {
     font-family: 'Creepster', sans-serif;
     font-size: 1.7rem;
+}
+
+.animated-button {
+    font-family: 'Creepster', sans-serif;
+    font-size: 1.5rem;
 }
 
 .nav-brand {
     font-family: 'Creepster', sans-serif;
     font-size: 3.2rem;
 }
- 
-.card-title {
-    font-family: 'Creepster', sans-serif;
-    font-size: 1.7rem;
-}
+
 
 .section-title {
     font-family: 'Creepster', sans-serif;
@@ -45,6 +46,7 @@ body, html {
 p, h5, label, .nav-link, .modal-body {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 
 /*-----------------------NAVBAR */
@@ -128,7 +130,6 @@ p, h5, label, .nav-link, .modal-body {
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
-    margin-right: 20px;
     margin-left: 20px;
 }
 
@@ -139,6 +140,22 @@ p, h5, label, .nav-link, .modal-body {
     background: none;
     transition: all 0.3s ease 0s;
 }
+
+/*-----------------------LOGIN/REGISTER */
+
+.form-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: #92140C !important;
+}
+
+.login-container {
+    text-align: center;
+    position: relative;
+    vertical-align: center;
+}
+
+
 
 /*-----------------------STORIES */
 
@@ -200,7 +217,7 @@ p, h5, label, .nav-link, .modal-body {
 
 /*-----------------------ADD & EDIT STORIES */
 
-input[type=text], select, textarea {
+input[type=text], select, textarea, .form-control {
     width: 100%;
     padding: 12px;
     border: 1px solid #92140C;

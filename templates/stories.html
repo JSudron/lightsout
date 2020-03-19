@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% set active_page = "stories" %}
 {% block content %}
-<!-----------------------STORIES----------->
-
-
     <div class="section-container text-center">
         <h1 class="section-title">STORIES</h1>
         <div class="row">
@@ -14,7 +11,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{story.story_name}}</h5>
                         <p class="card-text">Category: {{story.category}}</p>
-                        <p class="card-text">Author: {{story.submitted_by}}</small></p>
+                        <p class="card-text">Author: {{story.submitted_by}}</p>
                         <a class="btn btn-info card-link" href="{{url_for('stories', stories_id=story._id)}}">Read Story</a>
                     </div>
                 </div>
