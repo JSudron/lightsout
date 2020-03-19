@@ -55,14 +55,16 @@ def edit_stories(stories_id):
 @app.route('/update_stories/<stories_id>', methods=["POST"])
 def update_stories(stories_id):
     stories = mongo.db.stories
-    stories.update({'_id': ObjectId(stories_id)},
-                   {
-        'story_name': request.form.get('story_name'),
-        'category': request.form.get('category'),
-        'submitted_by': request.form.get('submitted_by'),
-        'story_text': request.form.get('story_text'),
-        'story_image': request.form.get('story_image')
-    })
+    print(request.form.get("category"))
+    stories.update_one({'_id': ObjectId(stories_id)},
+                       {"$set":
+                        {
+                            'story_name': request.form.get('story_name'),
+                            'category': request.form.get('category'),
+                            'submitted_by': request.form.get('submitted_by'),
+                            'story_text': request.form.get('story_text'),
+                            'story_image': request.form.get('story_image')
+                        }})
     return redirect(url_for('get_stories'))
 
 
@@ -70,7 +72,7 @@ def update_stories(stories_id):
 def delete_story(stories_id):
     mongo.db.stories.remove({'_id': ObjectId(stories_id)})
     return redirect(url_for('get_stories'))
-    
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

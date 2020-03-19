@@ -19,10 +19,10 @@
                     <input id="story_image" name="story_image" value="{{story.story_image}}" type="text" class="validate" pattern="https?://.+" required>
                     <label>Category Select</label>
                     <select id="category" name="category" required>
-                    <option value="" disabled selected>Choose Category</option>
+                    <option value="{{story.category_name}}" disabled>Choose Category</option>
                     {% for cat in categories %}
                         {% if cat.category_name == story.category %}
-                        <option value="{{story.category_name}}" selected >{{story.category}}</option>
+                        <option value="{{story.category_name}}" selected>{{story.category}}</option>
                         {% else %}
                         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                         {% endif %}
