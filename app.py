@@ -3,7 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
-
+# Ensures that the debug is set to false when deployed but true when open on gitpod
 should_debug = False
 
 if path.exists("env.py"):
@@ -23,22 +23,24 @@ mongo = PyMongo(app)
 def home():
     return render_template('home.html')
 
-
-@app.route('/get_stories')
+# Links the category id field from the categories collection with the category field from the stories collection
+@app.route('/get_stories') 
 def get_stories():
-    all_categories =list(mongo.db.categories.find())
-    all_stories =list(mongo.db.stories.find())
-    for story in all_stories: 
-        story["category"] = list(filter(lambda x: story["category"] == x.get('_id'), all_categories))[0].get('category_name')
+    all_categories = list(mongo.db.categories.find())
+    all_stories = list(mongo.db.stories.find())
+    for story in all_stories:
+        story["category"] = list(filter(lambda x: story["category"] == x.get(
+            '_id'), all_categories))[0].get('category_name')
 
     return render_template('stories.html', stories=all_stories)
 
-
+# A lambda was used in order to get the category id associated with each story & display the relevant category name
 @app.route('/stories/<stories_id>')
 def stories(stories_id):
-    all_categories =list(mongo.db.categories.find())
+    all_categories = list(mongo.db.categories.find())
     story = mongo.db.stories.find_one({'_id': ObjectId(stories_id)})
-    story["category"] = list(filter(lambda x: story.get("category") == x.get('_id'), all_categories))[0].get('category_name')
+    story["category"] = list(filter(lambda x: story.get(
+        "category") == x.get('_id'), all_categories))[0].get('category_name')
     return render_template('selected_story.html', story=story)
 
 
@@ -47,7 +49,7 @@ def add_story():
     return render_template('add_story.html',
                            categories=mongo.db.categories.find())
 
-
+# The category id is initially displayed but above code ensures the corresponding category name is displayed
 @app.route('/insert_story', methods=['POST'])
 def insert_story():
     stories = mongo.db.stories
