@@ -8,7 +8,7 @@
         <div class="row">
 
             <div class="column col-12 col-xl-6">
-            <img class="story-image" src="{{story.story_image}}">
+            <img class="story-image" src="{{story.story_image}}" alt="story_image">
             </div>
             <div class="column col-12 col-xl-6">
                 <form action="{{url_for('update_stories', stories_id=story._id)}}" method="POST">
