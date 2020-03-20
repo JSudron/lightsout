@@ -213,7 +213,6 @@ input[type=text], select, textarea, .form-control {
     overflow-y: auto;
     word-wrap: break-word;
     border-radius: 5px;
-    text-transform: capitalize;
 }
 
 .form-container {
