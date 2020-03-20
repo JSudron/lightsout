@@ -6,6 +6,7 @@
             <h2 class="section-title">Edit - {{story.story_name}}</h2>
         </div>
         <div class="row">
+
             <div class="column col-12 col-xl-6">
             <img class="story-image" src="{{story.story_image}}">
             </div>
@@ -18,11 +19,13 @@
                     <label for="story_image">Story Image Link</label>
                     <input id="story_image" name="story_image" value="{{story.story_image}}" type="text" class="validate" pattern="https?://.+" required>
                     <label>Category Select</label>
+                    
                     <select id="category" name="category" required>
-                    <option value="{{story.category_name}}" disabled>Choose Category</option>
+                    <option value="{{story.category}}" disabled>Choose Category</option>
+                    
                     {% for cat in categories %}
                         {% if cat.category_name == story.category %}
-                        <option value="{{story.category_name}}" selected>{{story.category}}</option>
+                        <option value="{{story.category}}" selected>{{story.category}}</option>
                         {% else %}
                         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                         {% endif %}

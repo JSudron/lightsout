@@ -3,8 +3,12 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
+
+should_debug = False
+
 if path.exists("env.py"):
     import env
+    should_debug = True
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'lights-out'
@@ -40,7 +44,13 @@ def add_story():
 @app.route('/insert_story', methods=['POST'])
 def insert_story():
     stories = mongo.db.stories
-    stories.insert_one(request.form.to_dict())
+    stories.insert_one({
+        'story_name': request.form.get('story_name'),
+        'category': request.form.get('category'),
+        'submitted_by': request.form.get('submitted_by'),
+        'story_text': request.form.get('story_text'),
+        'story_image': request.form.get('story_image')
+    })
     return redirect(url_for('get_stories'))
 
 
@@ -77,4 +87,4 @@ def delete_story(stories_id):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=should_debug)

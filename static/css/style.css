@@ -141,22 +141,6 @@ p, h5, label, .nav-link, .modal-body {
     transition: all 0.3s ease 0s;
 }
 
-/*-----------------------LOGIN/REGISTER */
-
-.form-link {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    color: #92140C !important;
-}
-
-.login-container {
-    text-align: center;
-    position: relative;
-    vertical-align: center;
-}
-
-
-
 /*-----------------------STORIES */
 
 .card {
