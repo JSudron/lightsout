@@ -155,6 +155,7 @@ The Creepster font was used for headers & in the navbar. It clearly gives off a 
 - The MongoDB database was utilised with a fairly simple many-to-many database.
 - The Database has two collections: Stories & Categories.
 - The category field in stories links to a key id field for the relevant category in categories.
+- Python coding was used to ensure that any changes to the category_name field in the categories collection will reflect in the category field in the stories collection.
 - [Stories](https://github.com/JSudron/lightsout/blob/master/images/database/database%20-%20stories.png?raw=true).
 - [Categories](https://github.com/JSudron/lightsout/blob/master/images/database/database%20-%20categories.png?raw=true).
 
@@ -219,6 +220,7 @@ The Creepster font was used for headers & in the navbar. It clearly gives off a 
 - Colour scheme from [Coolors](https://coolors.co/).
 - Slack & [Stack Overflow](https://www.stackoverflow.com/) were used to troubleshoot issues I had.
 - Tutor Support was also invaluable, not only the support but their patience.
+- Also huge thanks to my mentor who really gave me some amazing advice throughout the project, he definitely went over and above to help me out.
 
 #### Navbar
 

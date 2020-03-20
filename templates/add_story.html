@@ -12,11 +12,11 @@
             <div class="column col-12 col-xl-6">
                 <form action="{{url_for('insert_story')}}" method="POST">
                     <label for="story_name">Story Name</label>
-                    <input id="story_name" name="story_name" placeholder="Story Name" type="text" class="validate rounded" style="text-transform: capitalize;" required>
+                    <input id="story_name" name="story_name" placeholder="Story Name" type="text" class="validate capital" required>
                     <label for="submitted_by">Author</label>
-                    <input id="submitted_by" name="submitted_by" placeholder="Author" type="text" class="validate" style="text-transform: capitalize;" required>
+                    <input id="submitted_by" name="submitted_by" placeholder="Author" type="text" class="validate capital" required>
                     <label for="story_image">Story Image Link</label>
-                    <input id="story_image" name="story_image" placeholder="Story image link" type="text" class="validate rounded" pattern="https?://.+" required>
+                    <input id="story_image" name="story_image" placeholder="Story image link" type="text" class="validate" pattern="https?://.+" required>
                     <label>Category Select</label>
                     <select id="category" name="category" required>
                     <option class="category-select rounded" value="" disabled selected>Choose your category</option>
@@ -25,7 +25,7 @@
                     {% endfor %}
                     </select>
                     <label for="story_text">Your Story</label>
-                    <textarea name="story_text" id="story_text" rows="8" class="materialize-textarea rounded" onkeyup="adjustHeight(this)" style="text-transform: capitalize;" 
+                    <textarea name="story_text" id="story_text" rows="8" class="textarea capital" onkeyup="adjustHeight(this)" 
                         placeholder="Insert your story here..." required></textarea>
                     <input class="button_cont animated-button text-center" type="submit" value="Submit Story">
                 </form>

@@ -26,13 +26,20 @@ def home():
 
 @app.route('/get_stories')
 def get_stories():
-    return render_template('stories.html', stories=mongo.db.stories.find())
+    all_categories =list(mongo.db.categories.find())
+    all_stories =list(mongo.db.stories.find())
+    for story in all_stories: 
+        story["category"] = list(filter(lambda x: story["category"] == x.get('_id'), all_categories))[0].get('category_name')
+
+    return render_template('stories.html', stories=all_stories)
 
 
 @app.route('/stories/<stories_id>')
 def stories(stories_id):
-    stories = mongo.db.stories.find_one({'_id': ObjectId(stories_id)})
-    return render_template('selected_story.html', story=stories)
+    all_categories =list(mongo.db.categories.find())
+    story = mongo.db.stories.find_one({'_id': ObjectId(stories_id)})
+    story["category"] = list(filter(lambda x: story.get("category") == x.get('_id'), all_categories))[0].get('category_name')
+    return render_template('selected_story.html', story=story)
 
 
 @app.route('/add_story')
@@ -44,9 +51,11 @@ def add_story():
 @app.route('/insert_story', methods=['POST'])
 def insert_story():
     stories = mongo.db.stories
+    category = mongo.db.categories.find_one(
+        {"category_name": request.form.get('category')})
     stories.insert_one({
         'story_name': request.form.get('story_name'),
-        'category': request.form.get('category'),
+        'category': category.get('_id'),
         'submitted_by': request.form.get('submitted_by'),
         'story_text': request.form.get('story_text'),
         'story_image': request.form.get('story_image')
@@ -65,12 +74,13 @@ def edit_stories(stories_id):
 @app.route('/update_stories/<stories_id>', methods=["POST"])
 def update_stories(stories_id):
     stories = mongo.db.stories
-    print(request.form.get("category"))
+    category = mongo.db.categories.find_one(
+        {"category_name": request.form.get('category')})
     stories.update_one({'_id': ObjectId(stories_id)},
                        {"$set":
                         {
                             'story_name': request.form.get('story_name'),
-                            'category': request.form.get('category'),
+                            'category': category.get('_id'),
                             'submitted_by': request.form.get('submitted_by'),
                             'story_text': request.form.get('story_text'),
                             'story_image': request.form.get('story_image')

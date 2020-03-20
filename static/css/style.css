@@ -213,6 +213,7 @@ input[type=text], select, textarea, .form-control {
     overflow-y: auto;
     word-wrap: break-word;
     border-radius: 5px;
+    text-transform: capitalize;
 }
 
 .form-container {
@@ -236,6 +237,10 @@ input[type=text], select, textarea, .form-control {
     content: "";
     display: table;
     clear: both;
+}
+
+.capital {
+    text-transform: capitalize !important;
 }
 
 /*-----------------------FOOTER */
@@ -274,7 +279,7 @@ footer {
     -o-transition: all 0.5s ease-in-out;
 } 
 
-/*-----------------------MEDIA QUERY */
+/*-----------------------MEDIA QUERIES */
 
 @media (max-width: 767px) {
     .hero-image {
